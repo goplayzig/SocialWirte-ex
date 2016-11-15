@@ -9,7 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var Labe1: UILabel!
 
+    @IBAction func tapBtn() {
+        Labe1.text = "호롤롤로"
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
