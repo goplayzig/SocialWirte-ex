@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import Social
 
 class ViewController: UIViewController {
-    @IBOutlet weak var Labe1: UILabel!
+    @IBOutlet weak var Labe1: UILabel! //버튼 부품 가지고 오기
 
-    @IBAction func tapBtn() {
-        Labe1.text = "호롤롤로"
+    @IBAction func tapBtn() { // 버튼을 눌렀을때
+        
+        let cv = SLComposeViewController(forServiceType: SLServiceTypeFacebook) //글쓰기 대화 상자 만들기 (페이스북)
+        cv?.setInitialText("글을 써봅시다") //글 설정
+        
+        self.present(cv!,animated:true , completion:nil) //글쓰기 대화상자 출력
         
     }
     override func viewDidLoad() {
